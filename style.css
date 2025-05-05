@@ -1,6 +1,7 @@
 body{
     margin: 0px;
     box-sizing: border-box;
+    font-family: sans-serif;
 }
 .gelombang{
     color: rgb(53, 40, 33);
@@ -89,6 +90,19 @@ h1{
     color: white;
     border: 1px solid white;
 }
+h2{
+    font-size: 3rem;
+    background: url(https://cdn.pixabay.com/photo/2014/06/16/23/10/spices-370114_1280.jpg) center;
+    background-size: cover;
+    background-clip: text;
+    color: transparent;
+    animation: animate 10s linear infinite;
+}
+@keyframes animate{
+    to{
+        background-position-x: -200px;
+    }
+}
 .item2{
     grid-area: n;
     background-color: rgba(255, 255, 255, 0);
@@ -96,6 +110,9 @@ h1{
     width: 100%;
     position: sticky;
     top: 0;
+    margin: auto;
+    width: 50%;
+    border-radius: 20px;
 }
 .containernav{
     display: flex;

@@ -1,7 +1,7 @@
 body{
     margin: 0px;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: "Euclid Circular A", "Poppins";
 }
 .gelombang{
     color: rgb(53, 40, 33);
@@ -10,6 +10,10 @@ button{
     border: 2px solid rgb(218, 65, 65);
     background-color: rgba(255, 255, 255, 0);
     border-radius: 10px;
+}
+.taco3d{
+    width: 5%;
+    height: 10vh;
 }
 .container{
     display: grid;
@@ -37,20 +41,34 @@ ul {
     border: 1px solid white;
 }
 li {
-  float: left;
+    float: left;
 }
 
 li a, .dropbtn {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.1px;
+    margin-right: 10px;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    border: 1px solid rgb(214, 115, 115);
+    background-color: rgb(214, 115, 115);
+    border-radius: 30px;
+    transition: letter-spacing 0.5s ease;
 }
 
 li a:hover, .dropdown:hover .dropbtn {
     background-color: rgba(255, 255, 255, 0);
     backdrop-filter: blur(25px);
+    border: 1px solid rgb(214, 115, 115);
+    background-color: rgb(214, 115, 115);
+    letter-spacing: 5px;
+    transition: letter-spacing 0.3s ease;
 }
 
 li.dropdown {
@@ -60,10 +78,8 @@ li.dropdown {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: rgba(255, 255, 255, 0);
-  backdrop-filter: blur(25px);
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  border-radius: 30px;
 }
   
 .dropdown-content a {
@@ -92,6 +108,7 @@ h1{
     font-size: 50px;
     width: 1000px;
     font-size: clamp(40px,8vw,105px);
+    margin-bottom: 0px;
 }
 h2{
     font-size: 3rem;
@@ -100,6 +117,7 @@ h2{
     background-clip: text;
     color: transparent;
     animation: animate 10s linear infinite;
+    color: white;
 }
 @keyframes animate{
     to{
@@ -120,14 +138,14 @@ h2{
     width: 100%;
     position: sticky;
     top: 0;
-    margin: auto;
+    margin: 20px;
     margin-right: 0px;
     margin-left: 0px;
     width: 50%;
-    border-radius: 20px;
+    border-radius: 30px;
     display: flex;
     justify-content: space-around;
-    
+    padding: 5px;
 }
 .item3{
     grid-area: i;

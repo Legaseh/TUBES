@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kuliner Meksiko</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
 </head>
 <body>
@@ -15,28 +15,29 @@
             <h1>Mexican Culinary Adventure</h1>
         </div>
         <div class="item2">
-            <model-viewer class="taco3d" src="taco.glb" style="width: 5%; height: 10vh;" camera-controls></model-viewer>
-            <div class="containernav"><ul>
+            <model-viewer class="taco3d" id="taco3d" src="taco.glb"></model-viewer>
+            <div class="containernav">
+              <ul>
                 <li><a href="#">Home</a></li>
                 <li class="dropdown"><a href="#">Food</a>
-                    <div class="dropdown-content">
-                        <a href="#">Ayam</a>
-                        <a href="#">Nasi</a>
-                        <a href="#">Taco</a>
-                    </div>
+                  <div class="dropdown-content">
+                    <a href="#">Ayam</a>
+                    <a href="#">Nasi</a>
+                    <a href="#">Taco</a>
+                  </div>
                 </li>
                 <li class="dropdown"><a href="#">Drink</a>
-                    <div class="dropdown-content">
-                        <a href="#">Ayam</a>
-                        <a href="#">Nasi</a>
-                        <a href="#">Taco</a>
-                    </div>
-                </a></li>
+                  <div class="dropdown-content">
+                    <a href="#">Ayam</a>
+                    <a href="#">Nasi</a>
+                    <a href="#">Taco</a>
+                  </div>
+                </li>
                 <li><a href="#">Games</a></li>
-            </ul>
+              </ul>
             </div>
-            <model-viewer class="taco3d" src="taco.glb" style="width: 5%; height: 10vh;" camera-controls></model-viewer>
-        </div>
+            <model-viewer class="taco3d" id="taco3d1" src="taco.glb"></model-viewer>
+          </div>
         <div class="item3">
             <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             <h2>History & Cultural Influences</h2>

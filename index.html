@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Kritik dan Saran</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+/* 1 rem == 16px */
+  body {
+    margin: 0; 
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ece7e2, #a28c4b);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+  }
+
+  .form-container {
+    background: #594c22;
+    padding: 2.5rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    width: 100%;
+    max-width: 420px;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.4rem;
+    font-weight: 600;
+  }
+/* input nama, email, isi saran dll. */
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 0.6rem 0.75rem;
+    border-radius: 6px;
+    border: none;
+    margin-bottom: 1.25rem;
+    font-size: 1rem;
+    font-family: 'Poppins', sans-serif;
+    resize: vertical;
+    transition: box-shadow 0.3s ease;
+  }
+
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  textarea:focus {
+    outline: none;
+    box-shadow: 0 0 8px 3px #edcc7f;
+  }
+
+  textarea {
+    min-height: 100px;
+  }
+/* button u/ submit */
+  button {
+    background: #edcc7f;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    padding: 0.75rem 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  button:hover {
+    background: #d7c395;
+  }
+
+
+</style>
+</head>
+<body>
+  <form class="form-container" id="feedbackForm" method="GET" action="mailto:example@example.com" enctype="text/plain" onsubmit="return EmailValue();">
+    <h1>Critique & Suggestion</h1>
+    <label for="name">Name*</label>
+    <input type="text" id="name" name="name" placeholder="Your name" required />
+    <label for="email">Email*</label>
+    <input type="email" id="email" name="email" placeholder="Your email" required />
+    <label for="message">Your Critique & Suggestion*</label>
+    <textarea id="message" name="message" placeholder="Write your thoughts here" required></textarea>
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function EmailValue() {
+        // encodeURIComponent buat ngilangin tanda spasi, tnd tanya, simbol dll.
+      const form = document.getElementById('feedbackForm');
+      const name = encodeURIComponent(form.name.value.trim());
+      const email = encodeURIComponent(form.email.value.trim());
+      const message = encodeURIComponent(form.message.value.trim());
+
+    //   Function alert message kalo field ad yang ga di isi
+      if (!name || !email || !message) {
+        alert('Please fill out all required fields.');
+        return false;
+      }
+    }
+  </script>
+</body>
+</html>
+
